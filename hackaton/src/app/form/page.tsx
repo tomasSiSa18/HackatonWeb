@@ -3,8 +3,9 @@
 import { Button } from "@/components/ui/button"
 import { InputGroup, InputGroupInput } from "@/components/ui/input-group"
 import { Label } from "@/components/ui/label"
+import { Progress, ProgressLabel, ProgressValue } from "@/components/ui/progress"
 import { useRouter } from "next/navigation"
-import { useReducer, useState } from "react"
+import { useEffect, useReducer, useState } from "react"
 
 type State = {
     username: string
@@ -61,6 +62,7 @@ export default function CreatePlanPage() {
     const [state, dispatch] = useReducer(formReducer, initialState)
     const [error, setError] = useState<string | null>(null)
     const [sent, setSent] = useState(false)
+    const [progress, setProgress] = useState(0)
     const [loading, setLoading] = useState(false)
 
     const hasErrorsOrEmpty = (["username", "fullName", "age"] as const).some(
@@ -182,6 +184,10 @@ export default function CreatePlanPage() {
                     </Button>
                 </div>
             </form>
+            <Progress value={56} className="w-full max-w-sm">
+                <ProgressLabel>Upload progress</ProgressLabel>
+                <ProgressValue />
+            </Progress>
 
             {sent && (
                 <div className="flex flex-col gap-6">

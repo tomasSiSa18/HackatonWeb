@@ -1,8 +1,7 @@
-import { Form } from "@base-ui/react";
-import Link from "next/link";
+import { Form } from "@base-ui/react"
+import Link from "next/link"
 
 export default function Navbar() {
-
     return (
         <div className="flex flex-wrap items-center gap-8 dark:bg-gray-800 p-4 bg-gray-900 scale-x-[-1]">
             <h1 className="text-2xl font-bold text-white">Navbar</h1>
@@ -35,6 +34,5 @@ export default function Navbar() {
                 </Form>
             </div>
         </div>
-
     )
 }
