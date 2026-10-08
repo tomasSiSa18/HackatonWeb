@@ -54,19 +54,19 @@ export default function PasswordGenerator() {
           {length}
         </div>
         <div className='option'>
-          <label>A-Z</label>
+          <label>Uppercase</label>
           <input type='checkbox' id='uppercase' checked={isUppercaseActive} onChange={(e) => setIsUppercaseActive(e.target.checked)} />
         </div>
         <div className='option'>
-          <label>a-z</label>
+          <label>Lowercase</label>
           <input type='checkbox' id='lowercase' checked={isLowercaseActive} onChange={(e) => setIsLowercaseActive(e.target.checked)} />
         </div>
         <div className='option'>
-          <label>0-9</label>
+          <label>NBumbers</label>
           <input type='checkbox' id='numbers' checked={useNumbersActive} onChange={(e) => setIsNumbersActive(e.target.checked)} />
         </div>
         <div className='option'>
-          <label>!@#$%^&*</label>
+          <label>Special Characters</label>
           <input type='checkbox' id='symbols' checked={useSymbolsActive} onChange={(e) => setIsSymbolsActive(e.target.checked)} />
         </div>
       </div>
