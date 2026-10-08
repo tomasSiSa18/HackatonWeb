@@ -15,6 +15,9 @@ export default function Navbar() {
             <Link href="/form" className="flex items-center gap-2 text-white">
                 form
             </Link>
+            <Link href="/password" className="flex items-center gap-2 text-white">
+                password
+            </Link>
             <div className="margin-left-auto">
                 <Form action="/" className="flex items-center gap-2">
                     {}
