@@ -183,19 +183,13 @@ export default function CreatePlanPage() {
                 </div>
             </form>
 
-            {sent && 
-            <div className="flex flex-col gap-6">
-
-                <p>
-                   Usuario: {state.username}
-                </p>
-                <p>
-                    Nombre completo: {state.fullName}
-                </p>
-                <p>
-                    Edad: {state.age}
-                </p>     
-            </div>}
+            {sent && (
+                <div className="flex flex-col gap-6">
+                    <p>Usuario: {state.username}</p>
+                    <p>Nombre completo: {state.fullName}</p>
+                    <p>Edad: {state.age}</p>
+                </div>
+            )}
         </div>
     )
 }
